@@ -1,0 +1,26 @@
+<p>
+  <strong>Name:</strong>
+  <%= @category.name %>
+</p>
+
+
+<h2>keyboards:</h2>
+<% @category.keywords.each do |keyword| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= keyword.description %>
+  </p>
+  <% end %>
+    <h2>Add a Keyboard:</h2>
+  <%= form_for([@category, @category.keywords.build]) do |f| %>
+    <p>
+      <%= f.label :description %><br>
+      <%= f.text_field :description  %>
+      <%= f.hidden_field :category_id  %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+<%= link_to 'Back',categories_path %>
+<% end %>

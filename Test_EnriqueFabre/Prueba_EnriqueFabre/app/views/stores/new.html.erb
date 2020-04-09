@@ -1,0 +1,35 @@
+<%= form_for @stores do |f| %>
+    <h4 class="mb-3">Create Store</h4>
+      <div class="col-md-6 order-md-1">
+  <p>
+    <strong> <%= f.label :name %></strong>
+    <%= f.text_field :name   , class: "form-control"%>
+  </p>
+  <p>
+    <strong> <%= f.label :street %></strong>
+    <%= f.text_field :street  , class: "form-control" %>
+  </p>
+  <p>
+    <strong> <%= f.label :number %></strong>
+    <%= f.text_field :number   , class: "form-control"%>
+  </p>
+  <p>
+    <strong> <%= f.label :zip_code %></strong>
+    <%= f.text_field :zip_code  , class: "form-control" %>
+  </p>
+  <p>
+    <strong> <%= f.label :city %></strong>
+    <%= f.text_field :city  , class: "form-control"  %>
+  </p>
+  <p>
+    <strong> <%= f.label :country %></strong>
+    <%= f.text_field :country  , class: "form-control" %>
+  </p>
+
+  <%= render 'form',:f => f %>
+  <p>
+    <%= f.submit class: "btn btn-primary btn-lg btn-block" %>
+  </p>
+  <%= link_to 'Back',stores_path  %>
+<% end %>
+  </div>

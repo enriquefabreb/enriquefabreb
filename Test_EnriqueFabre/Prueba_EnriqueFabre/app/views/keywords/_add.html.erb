@@ -1,0 +1,10 @@
+<div class="keyword">
+<%= prefix = "category[new_keyword_attributes][]" %>
+<%= fields_for prefix, @keyword do |keyword_form| %>
+<p>
+  <label class="label-modal">keyword:</label>
+ <%= keyword_form.text_field :description %>
+ <%= keyword_form.hidden_field :category_id %>
+</p>
+<% end %>
+</div>

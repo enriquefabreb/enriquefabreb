@@ -1,0 +1,41 @@
+
+<%= form_for @products do |f| %>
+  <h4 class="mb-3">Create Product</h4>
+  <div class="col-md-6 order-md-1">
+
+
+  <p>
+    <strong> <%= f.label :name %></strong>
+    <%= f.text_field :name, class: "search-query", placeholder: "", type: "search", data: {autocomplete: autocomplete_keyword_description_products_path}, class: "form-control" %>
+
+  </p>
+  <p>
+    <strong> <%= f.label :color %></strong>
+    <%= f.text_field :color , class: "form-control" %>
+  </p>
+  <p>
+    <strong>Category</strong>
+    <%= f.collection_select :category_id, Category.all, :id, :name, {:include_blank => 'Select a Category...'}, {:class => "custom-select d-block w-100"} %>
+
+  </p>
+  <p>
+    <strong> <%= f.label :size %></strong>
+    <%= f.text_field :size, class: "form-control" %>
+  </p>
+  <p>
+    <strong> <%= f.label :price %></strong>
+    <%= f.text_field :price ,class: "form-control" %>
+  </p>
+    <%= render 'form',:f => f %>
+  <p>
+    <%= f.submit class: "btn btn-primary btn-lg btn-block" %>
+  </p>
+
+  <%= link_to 'Back',products_path  %>
+<% end %>
+  </div>
+<script type="text/javascript" charset="utf-8">
+  $('#product_name').bind('railsAutocomplete.select', function(event, data){
+  $('#new_product').submit()
+  });
+</script>

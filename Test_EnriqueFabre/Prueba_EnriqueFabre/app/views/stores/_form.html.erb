@@ -1,0 +1,9 @@
+<div class="content">
+    <strong><%= f.label "Products" %>  </strong><br />
+  <%= f.collection_check_boxes :product_ids, Product.all, :id, :name do |b| %>
+    <div class="">
+      <%= b.check_box %>
+        <strong><%= b.label %>  </strong>
+    </div>
+  <% end %>
+</div>

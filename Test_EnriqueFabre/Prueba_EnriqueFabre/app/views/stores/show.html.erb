@@ -1,0 +1,24 @@
+<h1>Details of:  <%= @stores.name %> </h1>
+
+<p>
+  <strong>Street:</strong>
+  <%= @stores.street %>
+</p>
+<p>
+  <strong>Number:</strong>
+  <%= @stores.number %>
+</p>
+<p>
+  <strong>Zip Code:</strong>
+  <%= @stores.zip_code %>
+</p>
+<p>
+  <strong>City:</strong>
+  <%= @stores.city %>
+</p>
+<p>
+  <strong>Country:</strong>
+  <%= @stores.country %>
+</p>
+<%= render 'form' %>
+  <%= link_to 'Back',stores_path  %>

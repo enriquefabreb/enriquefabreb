@@ -1,0 +1,90 @@
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
+$white: white;
+$black: black;
+
+.navbar {
+        margin-bottom: 0;
+        background: $blue;
+}
+body {
+        background: $blue;
+        color: $white;
+        font-family: 'Merriweather', sans-serif;
+}
+h1,
+h2 {
+        font-weight: bold;
+}
+p {
+        font-size: 16px;
+        color: $white;
+}
+a:visited {
+        color: $black;
+}
+.jumbotron {
+        background: #0048CD;
+        color: $white;
+        text-align: center;
+        p {
+                color: $white;
+                font-size: 26px;
+        }
+}
+.link {
+        color: $white;
+}
+.btn-primary {
+        color: $white;
+        border-color: $white;
+        margin-bottom: 5px;
+}
+.btn-sm {
+        background-color: $white;
+        display: inline-block;
+}
+img,
+video,
+audio {
+        margin-top: 20px;
+        max-width: 80%;
+}
+caption {
+
+        float: left;
+        clear: both;
+
+}
+.label-modal {
+        color: $black;
+}
+.custom-select {
+      display: inline-block;
+      width: 100%;
+      height: calc(1.5em + .75rem + 2px);
+      padding: .375rem 1.75rem .375rem .75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #495057;
+      vertical-align: middle;
+      border: 1px solid #ced4da;
+      border-radius: .25rem;
+      -webkit-appearance: none;
+
+}
+.custom-control-input {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 1rem;
+    height: 1.25rem;
+    opacity: 0;
+}
+.custom-control-label {
+    position: relative;
+    margin-bottom: 0;
+    vertical-align: top;
+}

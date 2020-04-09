@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Test Enrique Fabre" </title>
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <!-- JS file -->
+
+  
+      <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+    <header>
+
+     <%= render 'layouts/navigation' %>
+   </header>
+   <main role="main">
+   <%= content_for?(:content) ? yield(:content) : yield %>
+   </main>
+  </body>
+</html>

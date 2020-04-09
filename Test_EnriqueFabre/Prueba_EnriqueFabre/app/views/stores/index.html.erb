@@ -1,0 +1,36 @@
+
+<div class="container">
+  <h1>Stores List</h1>
+  <table  class="table table-bordered" style="color: white;>
+ <thead class="">
+  <div class="row">
+    <div >
+      <th>Name </th>
+      <th>Street </th>
+        <th>Number </th>
+      <th>  Zip Code </th>
+    <th>  City </th>
+      <th>  Country </th>
+    </div>
+  </div>
+   </thead>
+    <% @stores.each do |store| %>
+  <tr>
+    <td> <%= store.name %></td>
+    <td> <%= store.street %></td>
+    <td> <%= store.number %></td>
+    <td> <%= store.zip_code %></td>
+    <td> <%= store.city %></td>
+    <td> <%= store.country %></td>
+
+    <td> <%= link_to "Edit", edit_store_path(store), class: 'btn btn-primary'  %>
+     <%= link_to "Delete", store, method: :delete, data: { confirm: "Do you want to delete this store?"}, class: 'btn btn-primary'  %></td>
+  </tr>
+    <% end  %>
+    <tr>
+      <%= link_to 'NEW', new_store_path , :method => :get ,class: 'btn btn-primary'%>
+
+    </tr>
+
+</table>
+</div>

@@ -1,0 +1,31 @@
+
+<div class="form-group">
+      <div class="modal-header">
+
+        <h4 class="label-modal" id="myModalLabel">New Category</h4>
+        <button type="button" class="close" data-dismiss="modal">x</button>
+
+      </div>
+      <%= form_for @category do |f| %>
+        <div class="modal-body">
+          <div class="form-group">
+              <%= f.label :name, class:"label-modal" %>
+            <%= f.text_field :name, class: "form-control input-lg", placeholder: "Nombre" %>
+          </div>
+
+          <p>
+              <%= link_to "Add KeyWord", add_path, remote: true %>
+              <div id="keyword_id"></div>
+              <div class="content" ">
+
+              </div>
+            </p>
+
+
+
+        <div class="modal-footer">
+          <%= f.submit class: "btn btn-primary btn-lg btn-block" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
